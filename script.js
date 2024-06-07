@@ -1,11 +1,13 @@
 
-const toggler = document.getElementById("toggler");
-const sidebar = document.getElementById("sidebar");
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.querySelector('[data-collapse-toggle]');
+    const mobileMenu = document.getElementById('mobile-menu-2');
 
-document.getElementById('toggler').addEventListener('click', function () {
-    const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('hidden');
+    toggleButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
 });
+
 
 
 document.querySelectorAll('[data-accordion-target]').forEach(button => {
@@ -17,3 +19,6 @@ document.querySelectorAll('[data-accordion-target]').forEach(button => {
         target.classList.toggle('hidden', expanded);
     });
 });
+
+
+
